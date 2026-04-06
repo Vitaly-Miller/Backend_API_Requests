@@ -1,0 +1,8 @@
+
+04/06/2026 (11:14:25 AM):
+ERROR | test_env_values
+'PreparedRequest' object has no attribute 'content'
+
+04/06/2026 (11:14:59 AM):
+ERROR | test_env_values
+'PreparedRequest' object has no attribute 'content'
