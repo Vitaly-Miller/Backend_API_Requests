@@ -1,6 +1,6 @@
 """
 Base API
-(HTTP request methods)
+(Requests)
 """
 import requests
 from data.data import Base
@@ -9,47 +9,31 @@ from data.data import Base
 class BaseAPI:
     base_url = Base.URL
 
-    # 🟩GET
-    def get(self, endpoint, headers=None, params=None):
-        return requests.get(
+    def request(self, method: str, endpoint: str, **kwargs) -> requests.Response:
+        return requests.request(
+            method=method,
             url=f'{self.base_url}{endpoint}',
-            headers=headers,
-            params=params
+            **kwargs
         )
+
+    # 🟩GET
+    def get(self, endpoint: str, **kwargs) -> requests.Response:
+        return self.request('GET', endpoint, **kwargs)
 
     # 🟨POST
-    def post(self, endpoint, headers=None, json=None, params=None):
-        return requests.post(
-            url=f'{self.base_url}{endpoint}',
-            headers=headers,
-            params=params,
-            json=json
-        )
+    def post(self, endpoint: str, **kwargs) -> requests.Response:
+        return self.request('POST', endpoint, **kwargs)
 
     # 🟦PUT
-    def put(self, endpoint, headers=None, json=None, params=None):
-        return requests.put(
-            url=f'{self.base_url}{endpoint}',
-            headers=headers,
-            params=params,
-            json=json
-        )
+    def put(self, endpoint: str, **kwargs) -> requests.Response:
+        return self.request('PUT', endpoint, **kwargs)
 
     # 🟪PATCH
-    def patch(self, endpoint, headers=None, json=None, params=None):
-        return requests.patch(
-            url=f'{self.base_url}{endpoint}',
-            headers=headers,
-            params=params,
-            json=json
-        )
+    def patch(self, endpoint: str, **kwargs) -> requests.Response:
+        return self.request('PATCH', endpoint, **kwargs)
 
     # 🟥DELETE
-    def delete(self, endpoint, headers=None, params=None, json=None):
-        return requests.delete(
-            url=f'{self.base_url}{endpoint}',
-            headers=headers,
-            params=params,
-            json=json
-        )
+    def delete(self, endpoint: str, **kwargs) -> requests.Response:
+        return self.request('DELETE', endpoint, **kwargs)
+
 #-----------------------------------------------------------------------------------------------------------------------
