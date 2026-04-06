@@ -1,6 +1,6 @@
 """
-Base API_
-(Requests) - old version_
+Base API (Old version)
+(Requests)
 """
 import requests
 from data.data import Base
