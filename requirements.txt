@@ -1,0 +1,8 @@
+requests
+loguru
+allure-python-commons
+pydantic
+Faker
+pytest
+python-dotenv
+pytest-check
