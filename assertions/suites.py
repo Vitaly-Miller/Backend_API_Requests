@@ -13,7 +13,6 @@ class Suite:
         Check.status_code(response, status_code)
         Check.response_time(response)                  # default MAX_SEC form data.py
 
-
     # Response JSON format (dict/list) (4 in 1)
     @staticmethod
     def check_response_json_format(response):
