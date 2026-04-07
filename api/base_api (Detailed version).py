@@ -1,5 +1,5 @@
 """
-Base API (Old version)
+Base API (Detailed version)
 (Requests)
 """
 import requests
