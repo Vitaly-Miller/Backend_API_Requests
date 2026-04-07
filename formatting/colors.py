@@ -25,7 +25,7 @@ class ANSI:
     AMBER = '\033[38;5;214m'
     ORANGE = '\033[38;5;208m'
     LIGHT_ORANGE = '\033[38;5;214m'
-    RUST_ORANGE  = '\033[38;5;166m'
+    RUST_ORANGE = '\033[38;5;166m'
     BROWN_ORANGE = '\033[38;5;130m'
     BROWN = '\033[0;33m'
     B_BROWN = '\033[1;33m'
@@ -58,7 +58,3 @@ class ANSI:
     RESET = '\033[0m'
 
 #=======================================================================================================================
-## Вывод образцов:
-# for n, v in list(globals().items()):
-#     if isinstance(v, str) and v.startswith('\033'):
-#         print(f'{v}{n}{RESET}')
