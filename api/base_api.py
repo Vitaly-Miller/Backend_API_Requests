@@ -1,16 +1,18 @@
 """
 Base API
-(Requests)
+requests.Session()
 """
 import requests
 from data.data import Base
 
 #=======================================================================================================================
 class BaseAPI:
-    base_url = Base.URL
+    def __init__(self, base_url: str = Base.URL):
+        self.base_url = base_url
+        self.session = requests.Session()           # 👈Create session
 
     def request(self, method: str, endpoint: str, **kwargs) -> requests.Response:
-        return requests.request(
+        return self.session.request(                # 👈Send request session
             method=method,
             url=f'{self.base_url}{endpoint}',
             **kwargs

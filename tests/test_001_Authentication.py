@@ -2,7 +2,7 @@
 Authentication
 (POST)
 """
-from core.decorators import log, api_report, check_time
+from core.decorators import log, api_report
 from assertions.suites import Suite
 from data.data import Base
 from assertions.checks import Check
