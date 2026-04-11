@@ -6,7 +6,7 @@ from core.decorators import log, api_report
 from assertions.suites import Suite
 from data.data import Base
 from assertions.checks import Check
-import pytest_check
+import pytest_check # (optional)
 
 #=======================================================================================================================
 #---------------------- BASE API ----------------------
