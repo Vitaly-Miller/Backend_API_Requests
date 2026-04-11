@@ -13,7 +13,7 @@ class APIClient:
         self.client = requests.Session()
 
 
-    # ➡️ Внутренний _метод — сюда логи, авторизация, retry
+    # ➡️Внутренний _метод — сюда логи, авторизация, retry
     def _request(
             self,
             method: str,

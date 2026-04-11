@@ -15,4 +15,4 @@ class Fake:
     new_client_email = fake.email()                       # example@email.com
 
     # Books
-    book_id = random.choice([1, 3, 4, 5, 6])              #  Exclude "2" (because "available": false)
+    book_id = random.choice([1, 3, 4, 5, 6])              #  Exclude <2> (because "available": false)

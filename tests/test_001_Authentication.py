@@ -6,7 +6,7 @@ from core.decorators import log, api_report
 from assertions.suites import Suite
 from data.data import Base
 from assertions.checks import Check
-import pytest_check # (optional)
+import pytest_check    # (optional)
 
 #=======================================================================================================================
 #---------------------- BASE API ----------------------
@@ -18,7 +18,7 @@ def test_base_api(create_client):
 # Token is in Response body
 @log
 def test_token_key_in_response(create_client):
-    Check.key_in_response(create_client, 'accessToken')
+    Check.is_key_in_response(create_client, 'accessToken')
 
 # Token type
 @log
