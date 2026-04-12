@@ -1,6 +1,6 @@
 """
 API Client
-(Requests)
+(requests)
 """
 import requests
 from data.data import Base
@@ -13,7 +13,7 @@ class APIClient:
         self.client = requests.Session()
 
 
-    # 🚀Send request ---------------------------------------------------------------------------------------------------
+    # 🚀Send request 🟩🟨🟪🟦🟥----------------------------------------------------------------------------------------
     def _request(
             self,
             method: str,
