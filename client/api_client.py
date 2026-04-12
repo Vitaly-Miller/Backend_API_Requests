@@ -13,7 +13,7 @@ class APIClient:
         self.client = requests.Session()
 
 
-    # ➡️Внутренний _метод — сюда логи, авторизация, retry
+    # 🚀Send request ---------------------------------------------------------------------------------------------------
     def _request(
             self,
             method: str,
@@ -33,7 +33,6 @@ class APIClient:
     ) -> requests.Response:
         return self._request('GET', endpoint, params=params, headers=headers, timeout=timeout)
 
-
     # 🟨POST -----------------------------------------------------------------------------------------------------------
     def post(
             self,
@@ -46,7 +45,6 @@ class APIClient:
             timeout: float | None = None
     ) -> requests.Response:
         return self._request('POST', endpoint, params=params, headers=headers, json=json, data=data, files=files, timeout=timeout)
-
 
     # 🟪PATCH ----------------------------------------------------------------------------------------------------------
     def patch(
@@ -61,7 +59,6 @@ class APIClient:
     ) -> requests.Response:
         return self._request('PATCH', endpoint, params=params, headers=headers, json=json, data=data, files=files, timeout=timeout)
 
-
     # 🟦PUT ------------------------------------------------------------------------------------------------------------
     def put(
             self,
@@ -74,7 +71,6 @@ class APIClient:
             timeout: float | None = None
     ) -> requests.Response:
         return self._request('PUT', endpoint, params=params, headers=headers, json=json, data=data, files=files, timeout=timeout)
-
 
     # 🟥DELETE ---------------------------------------------------------------------------------------------------------
     def delete(
